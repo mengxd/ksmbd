@@ -42,7 +42,7 @@ PWD	:= $(shell pwd)
 PWD	:= $(shell pwd)
 
 export CONFIG_SMB_SERVER := m
-CFLAGS += -Wno-error -D_FORTIFY_SOURCE=0
+CFLAGS := -Wno-error -D_FORTIFY_SOURCE=0
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD) $(CFLAGS) modules
