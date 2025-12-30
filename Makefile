@@ -42,6 +42,7 @@ PWD	:= $(shell pwd)
 PWD	:= $(shell pwd)
 
 export CONFIG_SMB_SERVER := m
+CFLAGS += -D_FORTIFY_SOURCE=0
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules
